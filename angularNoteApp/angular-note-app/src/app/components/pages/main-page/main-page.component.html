@@ -1,0 +1,29 @@
+<div class="content" role="main">
+  <h2>My notes</h2>
+
+  <div class="card-container">
+    <div class="card empty" *ngIf="notes.length === 0">
+      <span>Nothing to show. Add yout first note.</span>
+    </div>
+
+    <div class="card" *ngFor="let note of notes">
+      <h2>{{ note.title }}</h2>
+      <p>{{ note.content }}</p>
+    </div>
+  </div>
+
+  <div class="card-container">
+    <button class="card card-small" routerLink="addNote">
+      <svg
+        class="material-icons"
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+      >
+        <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
+      </svg>
+      <span>Add</span>
+    </button>
+  </div>
+</div>
