@@ -8,7 +8,9 @@
 
     <div class="card" *ngFor="let note of notes">
       <h2>{{ note.title }}</h2>
-      <p>{{ note.content }}</p>
+      <div class="body">
+        <p>{{ note.content }}</p>
+      </div>
     </div>
   </div>
 
