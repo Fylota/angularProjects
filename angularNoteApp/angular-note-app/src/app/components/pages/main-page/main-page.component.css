@@ -57,7 +57,7 @@ svg.material-icons:not(:last-child) {
 }
 
 .card .card-header {
-  display: flex;
+  color: #125699;
 }
 
 .delete-btn {

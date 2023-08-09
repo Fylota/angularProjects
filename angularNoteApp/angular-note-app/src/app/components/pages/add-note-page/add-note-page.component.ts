@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Route, Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { Note } from 'src/app/models/Note';
 import { NoteService } from 'src/app/services/note.service';
 
@@ -25,6 +25,10 @@ export class AddNotePageComponent implements OnInit {
 
   addNote(newNote: Note) {
     this.noteService.addNote(newNote);
+    this.router.navigate([""]);
+  }
+
+  cancel(): void {
     this.router.navigate([""]);
   }
 
