@@ -21,4 +21,9 @@ export class MainPageComponent implements OnInit {
         .subscribe(notes => this.notes = notes);
   }
 
+  deleteNote(note: Note): void {
+    this.noteService.deleteNote(note);
+    this.getNotes();
+  }
+
 }

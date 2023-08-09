@@ -7,10 +7,13 @@
     </div>
 
     <div class="card" *ngFor="let note of notes">
-      <h2>{{ note.title }}</h2>
+      <div class="card-header">
+        <h2>{{ note.title }}</h2>
+      </div>
       <div class="body">
         <p>{{ note.content }}</p>
       </div>
+      <button class="delete-btn" (click)="deleteNote(note)"></button>
     </div>
   </div>
 
